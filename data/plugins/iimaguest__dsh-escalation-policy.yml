@@ -1,0 +1,6 @@
+url: https://github.com/iimaguest/dsh-escalation-policy
+name: iimaguest/dsh-escalation-policy
+category: security
+description:
+  en: 'Sandbox-escalation seam (ctx.escalation) with a per-session ask/deny/allow policy and an escalation settings row in Settings → General.'
+  zh: 沙箱升级能力缝（ctx.escalation），带按会话的询问/拒绝/允许策略，以及在设置 → 通用中的升级策略设置项。

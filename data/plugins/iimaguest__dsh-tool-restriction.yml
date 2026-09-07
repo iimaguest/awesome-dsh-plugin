@@ -1,0 +1,6 @@
+url: https://github.com/iimaguest/dsh-tool-restriction
+name: iimaguest/dsh-tool-restriction
+category: tools
+description:
+  en: 'Per-session tool mask (ctx.toolRestriction): an allow-list over a session''s inherited tool set, fixed for the run, saved per preset, plus the preset tool-defaults reader.'
+  zh: 按会话的工具掩码（ctx.toolRestriction）：对会话继承工具集的允许列表，运行期间固定，按预设保存，附带预设工具默认值读取器。

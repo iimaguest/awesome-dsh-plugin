@@ -80,6 +80,7 @@ dsh plugin --profile web add dshmarket
 ### 🧭 AGI 架构探索
 
 - [FuRongJun-1999/dsh-memory](https://github.com/FuRongJun-1999/dsh-memory) — 白箱AGI架构探索：元认知（自我认知循环）、持续学习（知识飞轮）、世界模型（条件空间+语义时空图）、自我改进（自举纪律）、零LLM白箱管线与可审计信任护栏。
+- [iimaguest/dsh-goal-review](https://github.com/iimaguest/dsh-goal-review) — 缓存对齐的周期性目标复盘驱动（宿主侧），对照会话重新核验代理目标，附带目标栏中的立即复盘控件。
 
 ### 🎨 UI 增强
 
@@ -1204,6 +1205,7 @@ dsh plugin --profile web add dshmarket
 - [huaxiren6/dsh-sms-webhook](https://github.com/huaxiren6/dsh-sms-webhook) — DSH 短信转发 webhook：手机端转发 App（短信转发器/Tasker 等）把短信 POST 到本地 HTTP 端点，插件落盘 JSONL 并暴露 sms_recent / sms_search 工具，让 agent 在任务中直接读取短信验证码；自动提取 4–8 位 OTP，支持关键词过滤，可走局域网或 Tailscale。
 - [huey1in/trio](https://github.com/huey1in/trio) — 浏览器自动化（Playwright，带实时画面）+ MCP Server（把 DSH agent 暴露给任何 MCP 客户端）+ GitHub issue/PR/webhook 评审工具。
 - [hyzyn/dsh-plugin-kit#rss](https://github.com/hyzyn/dsh-plugin-kit/tree/main/packages/rss) — DSH 的 RSS/新闻聚合插件：内置渠道库 + awesome-rsshub-routes 精选订阅源目录 + 自定义源（保存时真实抓取校验），每天自动汇总成「今日值得读」Markdown 并注入 systemPrompt；带 Web 设置卡片与侧边栏阅读弹窗。
+- [iimaguest/dsh-tool-restriction](https://github.com/iimaguest/dsh-tool-restriction) — 按会话的工具掩码（ctx.toolRestriction）：对会话继承工具集的允许列表，运行期间固定，按预设保存，附带预设工具默认值读取器。
 - [ilps2/dsh-video-understand](https://github.com/ilps2/dsh-video-understand) — 低成本视频理解工具：video_understand 把 B站链接/BV号/本地视频转成 AVIS 信息层（ASR+场景结构+对象轨迹+YOLO 标签）并输出摘要+问答。问题驱动动态路由分层（L0 ASR / L1 对象轨迹 / L2 关键帧 VLM）、语义层复用（重复提问直接查层）、单次问题预算上限。引擎自包含，无外部依赖。
 - [initial-d/dsh-plugin-mlquant-benchmark](https://github.com/initial-d/dsh-plugin-mlquant-benchmark) — 用于复现并校验 ml-quant-trading protocol v1 CPU 基准测试，并生成可提交 issue 报告的 DSH 工具。需要本地 clone initial-d/ml-quant-trading，并将其设为 workspace 或 repoPath，同时自行准备 Python 和 PyTorch；本插件不会获取仓库或安装依赖。
 - [Isanti2016/dsh-console](https://github.com/Isanti2016/dsh-console) — dsh 控制台命令：/web 启动/停止/重启/状态、/tunnel SSH 隧道管理、/ask 一次性问答、/console 启动控制台 TUI。
@@ -1533,6 +1535,7 @@ dsh plugin --profile web add dshmarket
 - [hawkhai/wechat-ocr](https://github.com/hawkhai/wechat-ocr) — DSH 的本地微信 OCR 工具：`wechat_ocr_recognize` 针对本地图片路径返回识别文本和引擎的结构化结果。
 - [hawkhai/win11-oneocr](https://github.com/hawkhai/win11-oneocr) — DSH 的本地 Windows 11 OneOCR 工具：`oneocr_recognize` 返回 OCR 文本，以及包含行/词多边形、置信度、旋转角度和手写体样式的结构化结果。
 - [Hyp6666/dsh-open-eyes](https://github.com/Hyp6666/dsh-open-eyes) — 为纯文本 DeepSeek 路由提供视觉桥接：通过可配置的 OpenAI Responses、Chat Completions 或 Anthropic Messages 端点分析附件与本地图片，同时保持支持图片的路由走原生路径。
+- [iimaguest/dsh-vision](https://github.com/iimaguest/dsh-vision) — 视觉检查插件包：ctx.vision 能力缝、DeepSeek 视觉提供方、以及模型侧 view_image 工具，集成在一个可安装插件中。
 - [InkshadeWoods/dsh-tool-visual-primitives](https://github.com/InkshadeWoods/dsh-tool-visual-primitives) — 通过模式化提示分析对话图片（描述、UI、文档、定位、拓扑等），将含坐标原语（框、点、引用）的结构化证据以文本注入上下文，会话级缓存跨回放与压缩复用。
 - [Isanti2016/dsh-quicksight](https://github.com/Isanti2016/dsh-quicksight) — 纯文本模型双层识图：优先本地快速 OCR（RapidOCR，离线），不足时回落视觉模型（modlens）。
 - [jing-hy/picturereader](https://github.com/jing-hy/picturereader) — 给纯文本模型的"读图"能力：图片降分辨率+降色深+结构/色彩指纹渲染成文本网格喂回对话，模型像多模态一样自主缩放、取样、OCR 读图；纯本地零外部模型依赖，附读图方法论 skill 与可选 PaddleOCR。
@@ -2349,6 +2352,7 @@ dsh plugin --profile web add dshmarket
 - [howmp/dsh-pentest](https://github.com/howmp/dsh-pentest) — 面向 DeepSeek Harness 的授权渗透模式：以探索链路记录目标、线索、资产与漏洞，并在 Web 中可视化展示。
 - [hxy91819/dsh-auth](https://github.com/hxy91819/dsh-auth) — 通过 Caddy forward_auth 为 DeepSeek Harness Web 提供管理员登录，含 Argon2id 口令、可撤销会话、中英界面和侧栏原生退出。
 - [iiiweiii/dsh-guardwall](https://github.com/iiiweiii/dsh-guardwall) — 在安装前体检本地、npm 与 GitHub 插件源码，运行时拦截命中配置阈值的高风险工具调用，审计输出中的密钥模式，并写入 HMAC 链式本地审计日志。
+- [iimaguest/dsh-escalation-policy](https://github.com/iimaguest/dsh-escalation-policy) — 沙箱升级能力缝（ctx.escalation），带按会话的询问/拒绝/允许策略，以及在设置 → 通用中的升级策略设置项。
 - [ilharp/dsh-tool-approval](https://github.com/ilharp/dsh-tool-approval) — 手动审批模式（Manual/Ask Mode）。
 - [J0ss077/dsh-always-require-tools-approval](https://github.com/J0ss077/dsh-always-require-tools-approval) — 在配置的工具（默认 bash、pwsh）执行前要求一次性用户审批：受控工具暂停并询问，其余委托执行，缺少审批渠道时默认拒绝。
 - [Jiao-XXX/dsh-auto-approve](https://github.com/Jiao-XXX/dsh-auto-approve) — 在 workspace-write 与 danger-full-access 之间增加 `auto` 权限档：分类器一次性放行例行沙箱升级，危险或不确定的操作仍转人工审批。

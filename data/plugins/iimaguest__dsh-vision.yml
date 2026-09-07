@@ -1,0 +1,6 @@
+url: https://github.com/iimaguest/dsh-vision
+name: iimaguest/dsh-vision
+category: vision
+description:
+  en: 'Vision inspection bundle: the ctx.vision capability seam, the DeepSeek view provider, and the model-facing view_image tool in one installable plugin.'
+  zh: 视觉检查插件包：ctx.vision 能力缝、DeepSeek 视觉提供方、以及模型侧 view_image 工具，集成在一个可安装插件中。

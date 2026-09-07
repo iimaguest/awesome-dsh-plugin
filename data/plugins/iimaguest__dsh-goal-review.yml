@@ -1,0 +1,6 @@
+url: https://github.com/iimaguest/dsh-goal-review
+name: iimaguest/dsh-goal-review
+category: agi
+description:
+  en: 'Cache-aligned periodic goal-review driver (host) that re-verifies agent goals against the session, with a review-now control in the goal strip.'
+  zh: 缓存对齐的周期性目标复盘驱动（宿主侧），对照会话重新核验代理目标，附带目标栏中的立即复盘控件。
